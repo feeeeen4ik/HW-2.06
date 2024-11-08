@@ -14,11 +14,20 @@ final class MainViewController: UIViewController {
     
     let userData = User.getUserData()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        userNameOutlet.text = userData.userName
+        passwordOutlet.text = userData.userPassword
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let LogInVC = segue.destination as? LogInViewController else {
-            return
+        let tabBarVC = segue.destination as? UITabBarController
+        tabBarVC?.viewControllers?.forEach{viewController in
+            if let LogInVC = viewController as? LogInViewController {
+                LogInVC.userName = userData.userName
+            }
         }
-        LogInVC.userName = userData.userName
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
