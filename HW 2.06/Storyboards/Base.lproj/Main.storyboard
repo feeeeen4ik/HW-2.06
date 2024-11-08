@@ -97,51 +97,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="ffO-iA-aEf">
-                                <rect key="frame" x="101.5" y="185.5" width="172.5" height="296.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya8-2c-3L4">
+                                <rect key="frame" x="145" y="498" width="85" height="34.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Log Out">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="logOutButtonAction" destination="BSX-GU-vmh" eventType="touchUpInside" id="NJ1-Xv-26O"/>
+                                    <segue destination="ra1-Kl-ly3" kind="unwind" unwindAction="unwindFor:" id="E8C-N3-9SK"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="t18-8v-fUH">
+                                <rect key="frame" x="135.5" y="109" width="104.5" height="188"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ei-Bj-mOO">
-                                        <rect key="frame" x="11" y="0.0" width="150" height="41"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ei-Bj-mOO">
+                                        <rect key="frame" x="0.0" y="0.0" width="104.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" systemColor="systemBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My name is " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfc-nt-kOI">
-                                        <rect key="frame" x="0.0" y="81" width="172.5" height="41"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My name is " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfc-nt-kOI">
+                                        <rect key="frame" x="0.0" y="64" width="104.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QR9-Sv-NnS">
-                                        <rect key="frame" x="59" y="162" width="54" height="60"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QR9-Sv-NnS">
+                                        <rect key="frame" x="0.0" y="128" width="104.5" height="60"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya8-2c-3L4">
-                                        <rect key="frame" x="43.5" y="262" width="85" height="34.5"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Log Out">
-                                            <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
-                                            <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="logOutButtonAction" destination="BSX-GU-vmh" eventType="touchUpInside" id="NJ1-Xv-26O"/>
-                                            <segue destination="ra1-Kl-ly3" kind="unwind" unwindAction="unwindFor:" id="E8C-N3-9SK"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vHH-Yk-2pw"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="ffO-iA-aEf" firstAttribute="centerY" secondItem="q91-Qq-PLT" secondAttribute="centerY" id="SHH-MD-96c"/>
-                            <constraint firstItem="ffO-iA-aEf" firstAttribute="centerX" secondItem="q91-Qq-PLT" secondAttribute="centerX" id="xtL-Af-N6B"/>
+                            <constraint firstItem="t18-8v-fUH" firstAttribute="top" secondItem="vHH-Yk-2pw" secondAttribute="top" constant="109" id="0YK-tk-ZQD"/>
+                            <constraint firstItem="t18-8v-fUH" firstAttribute="centerX" secondItem="q91-Qq-PLT" secondAttribute="centerX" id="aaA-vd-igr"/>
+                            <constraint firstItem="vHH-Yk-2pw" firstAttribute="trailing" secondItem="ya8-2c-3L4" secondAttribute="trailing" constant="145" id="dZl-tI-ji7"/>
+                            <constraint firstItem="vHH-Yk-2pw" firstAttribute="bottom" secondItem="ya8-2c-3L4" secondAttribute="bottom" constant="85.5" id="e73-GC-GtL"/>
+                            <constraint firstItem="ya8-2c-3L4" firstAttribute="leading" secondItem="vHH-Yk-2pw" secondAttribute="leading" constant="145" id="nKa-A8-Ztq"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="person.fill" catalog="system" id="iVI-xA-FmX"/>
                     <connections>
+                        <outlet property="personWelcomeOutlet" destination="sfc-nt-kOI" id="W8B-Pu-jpJ"/>
                         <outlet property="welcomeOutlet" destination="8ei-Bj-mOO" id="XOF-cR-kY9"/>
                     </connections>
                 </viewController>
@@ -211,6 +215,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="M9s-sb-YN0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bfl-A0-Toc">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

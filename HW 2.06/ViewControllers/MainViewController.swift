@@ -13,6 +13,7 @@ final class MainViewController: UIViewController {
     @IBOutlet var passwordOutlet: UITextField!
     
     let userData = User.getUserData()
+    let personData = Person.getInfo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,9 @@ final class MainViewController: UIViewController {
         tabBarVC?.viewControllers?.forEach{viewController in
             if let LogInVC = viewController as? LogInViewController {
                 LogInVC.userName = userData.userName
+                LogInVC.personName = personData.name + " " + personData.secondName
+            } else if let PersonVC = viewController as? PersonViewController {
+                PersonVC.title = personData.name + " " + personData.secondName
             }
         }
     }
